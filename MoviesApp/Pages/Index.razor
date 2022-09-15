@@ -1,0 +1,34 @@
+﻿@page "/"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager;
+@using MoviesAppModels;
+@using System.Net.Http.Headers
+@using Newtonsoft.Json
+
+<PageTitle>Home</PageTitle>
+
+
+
+<h1>MOVIES </h1>
+
+    WELCOME TO THE MOVIES APPLICATION
+
+<SurveyPrompt />
+
+
+@code{
+
+    protected async Task BookMovie() {
+        MoviesAppModels.Models.Bookings bookings = new MoviesAppModels.Models.Bookings();
+        bookings.id = 0;
+        bookings.day = "Wed";
+        bookings.hour = "13h:00";
+        bookings.MovieId = Convert.ToInt32(100);
+
+
+         var serialized = JsonConvert.SerializeObject(bookings);
+         var stringContent = new StringContent(serialized, System.Text.Encoding.UTF8, "application/json");
+         var result = await httpClient.PostAsync($"{navigationManager.BaseUri}AddBooking", stringContent).ConfigureAwait(false);
+
+    }
+}

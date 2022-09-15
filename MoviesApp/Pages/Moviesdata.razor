@@ -1,0 +1,89 @@
+﻿@page "/moviesdata"
+@inject IMovies movieService;
+@using MoviesApp.Services
+@using MoviesAppModels
+@using MoviesAppModels.Models
+@inject NavigationManager UriHelper
+
+
+<div class="container">
+
+    <h3>Movies  Data</h3>
+
+
+
+
+
+
+
+
+    @if (MovieList == null) {
+        <div class="row">
+            <div class="text-center">Loading ....</div>
+        </div>
+    } else {
+        <div class="row  d-flex justify-content-around" style="margin-top: 20px; margin-bottom: 20px ">
+            @foreach (var item in MovieList) {
+                <div class="card col-4 mt-5 card_hovered abs_card">
+                    <span style="position: absolute; left: 35px; top: 15%; color: #fff; font-weight: bolder; ">
+                        <h3>@item.title</h3>
+                    </span>
+
+                    <img src="/imgz/mvie.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text truncate_movie_card">@item.notes</p>
+
+
+                        <button class="btn btn-primary"
+                        @onclick="()=> GetId(item)">
+                            Details
+                        </button>
+
+                        <a href="#" class="btn btn-success">Book</a>
+
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    }
+
+</div>
+
+
+@code {
+
+
+    private List<MovieEntity> MovieList = new List<MovieEntity>();
+
+
+    protected override async Task OnInitializedAsync() {
+        await GetMovies();// this is the below method
+    }
+
+    private async Task GetMovies() { // this will inde=irectly call the api
+
+        MovieList = await movieService.GetLocalMovies();
+
+    }
+
+
+    void GetId(MovieEntity movie) {
+
+        String mon=movie.RunningTimeEntities.mon,
+        tue = movie.RunningTimeEntities.tue,
+        wed =movie.RunningTimeEntities.wed,
+        thu = movie.RunningTimeEntities.thu,
+        fri = movie.RunningTimeEntities.fri,
+        sat = movie.RunningTimeEntities.sat,
+        sun = movie.RunningTimeEntities.sun;
+
+
+        UriHelper.NavigateTo($"MovieDetails/{movie.title}/{movie.year}/{movie.director}/{movie.cast}/{movie.genre}/{movie.notes}/{movie.id}/{mon}/{tue}/{wed}/{thu}/{fri}/{sat}/{sun}");
+
+
+    //    UriHelper.NavigateTo("/test");
+
+    }
+}

@@ -1,0 +1,75 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = MoviesApp
+build_property.RootNamespace = MoviesApp
+build_property.ProjectDir = E:\Projects\MoviesAppSolution\MoviesApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Projects\MoviesAppSolution\MoviesApp
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/BookingsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va2luZ3NMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/DisplayHours.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzcGxheUhvdXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/MovieDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/Moviesdata.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVzZGF0YS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/MyModal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlNb2RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Pages/NewBooking.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3Qm9va2luZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cvxs0cjnmp
+
+[E:/Projects/MoviesAppSolution/MoviesApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-fgpc701lo8

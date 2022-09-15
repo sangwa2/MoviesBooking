@@ -1,0 +1,12 @@
+E:\Projects\MoviesAppSolution\MoviesAppModels\bin\Debug\net6.0\MoviesAppModels.deps.json
+E:\Projects\MoviesAppSolution\MoviesAppModels\bin\Debug\net6.0\MoviesAppModels.dll
+E:\Projects\MoviesAppSolution\MoviesAppModels\bin\Debug\net6.0\MoviesAppModels.pdb
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.csproj.AssemblyReference.cache
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.AssemblyInfoInputs.cache
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.AssemblyInfo.cs
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.csproj.CoreCompileInputs.cache
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.dll
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\refint\MoviesAppModels.dll
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\MoviesAppModels.pdb
+E:\Projects\MoviesAppSolution\MoviesAppModels\obj\Debug\net6.0\ref\MoviesAppModels.dll

@@ -1,0 +1,50 @@
+﻿@page "/Bookings"
+@inject IBookings bookingService;
+@using MoviesApp.Services
+@using MoviesAppModels
+@using MoviesAppModels.Models
+
+<h3>Bookings</h3>
+
+
+
+<table class="table table-striped table-bordered">
+
+
+
+    <thead>
+        <tr>
+            <td>Day</td>
+            <td>Hour</td>
+            <td>Movie</td>
+        </tr>
+    </thead>
+
+    <tbody>
+      @foreach (var item in BookingList) {
+            <tr>
+                <td>@item.day</td>
+                <td>@item.hour</td>
+                <td>@item.MovieId</td>
+            </tr>
+        }
+    </tbody>
+    
+</table>
+
+@code {
+
+    private List<MoviesAppModels.Models.Bookings> BookingList = new List<MoviesAppModels.Models.Bookings>();
+
+    protected override async Task OnInitializedAsync() {
+        await GetMovies();
+    }
+
+    private async Task GetMovies() { // this will inde=irectly call the api
+
+        BookingList = await bookingService.GetBookings();
+
+
+    }
+
+}

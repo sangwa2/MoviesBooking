@@ -1,0 +1,51 @@
+﻿@inject NavigationManager UriHelper
+
+<li class="list-group-item ">
+    <div class="row">
+        <h4> @DayTop</h4>
+    </div>
+    <div class="d-flex justify-content-around align-items-center">
+        @{
+            var times = @day.Split(',');
+        }
+        @for (int i = 0; i < @times.Length; i++) {
+            var t = @times[@i];
+            <button class="btn btn-success" @onclick="()=> GetMovieId(t)">
+                @times[@i]
+            </button>
+        }
+    </div>
+</li>
+@code {
+    [Parameter]
+    public string day { get; set; } // this will bring the collection of times
+
+    [Parameter]
+    public string day_name { get; set; }
+
+    [Parameter]
+    public string DayTop { get; set; }
+
+    [Parameter]
+    public int movie_id{ get; set; }
+
+
+      [Parameter]
+    public int hour{ get; set; }
+
+
+    void GetMovieId(String times) {
+        Console.WriteLine("-------------  You chose the times: " + times 
+        + " The movie is: "
+        +movie_id
+        + " Day: "+ DayTop);
+
+
+         UriHelper.NavigateTo($"newBooking/{DayTop}/{times}/{movie_id}");
+
+          
+
+    }
+
+
+}

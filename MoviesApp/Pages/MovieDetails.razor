@@ -1,0 +1,110 @@
+﻿@page "/MovieDetails/{title}/{year:int}/{director}/{cast}/{genre}/{notes}/{id:int}/{mon}/{tue}/{wed}/{thu}/{fri}/{sat}/{sun}"
+@using MoviesAppModels
+@using MoviesAppModels.Models
+
+<h5 class="mb-3">Movie Details</h5>
+<div class="row mb-4">
+    <NavLink class="nav-link" href="moviesdata">
+        <span>  <b>   Movies  </b></span>
+    </NavLink>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-between">
+        <div class="col-md-5">
+            <div class="card mb-4">
+                <span style="position: absolute; left: 35px; top: 15%; color: #fff; font-weight: bolder; ">
+                    <h1>@title</h1>
+                </span>
+                <img src="/imgz/mvie.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text"> @notes  </p>
+                    <div class="row">
+                        <div class="col">
+                            <h6>  <span class="text-dark badge_hovered badge alert-success badge-pill">Genre: @genre </span>   </h6>
+                        </div>
+                        <div class="col">
+                            <h6>  <span class="text-dark badge_hovered badge alert-success badge-pill">Year: @year </span>   </h6>
+                        </div>
+                        <div class="col">
+                            <h6>  <span class="text-dark badge_hovered badge alert-success badge-pill">Director: @director </span>   </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6 border border-light">
+            <div class="row">
+                <ul class="list-group">
+                    
+                    <DisplayHours day=@mon movie_id=@id  DayTop="Monday" />
+                    <DisplayHours day=@tue movie_id=@id  DayTop="Tuesday"/>
+                    <DisplayHours day=@wed movie_id=@id  DayTop="Wednesday"/>
+                    <DisplayHours day=@thu movie_id=@id  DayTop="Thursday"/>
+                    <DisplayHours day=@fri movie_id=@id  DayTop="Friday"/>
+                    <DisplayHours day=@sat movie_id=@id  DayTop="Saturday"/>
+                    <DisplayHours day=@sun movie_id=@id  DayTop="Sunday"/>
+
+                </ul>
+
+                <div class="list-group">
+                    <h2> @title</h2>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                </ul>
+
+                <h4 style="margin-top: 40px">Cast</h4>
+                <p>
+                    @cast
+                </p>
+                <br />
+
+                <button class="btn btn-success booking_btn_bg my-5">Book for the movie</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public string title { get; set; }
+
+    [Parameter]
+    public int year { get; set; }
+    [Parameter]
+    public string director { get; set; }
+    [Parameter]
+    public string cast { get; set; }
+    [Parameter]
+    public string genre { get; set; }
+    [Parameter]
+    public string notes { get; set; }
+    [Parameter]
+    public int id { get; set; }
+    [Parameter]
+    public string mon { get; set; }
+    [Parameter]
+    public string tue { get; set; }
+    [Parameter]
+    public string wed { get; set; }
+    [Parameter]
+    public string thu { get; set; }
+    [Parameter]
+    public string fri { get; set; }
+    [Parameter]
+    public string sat { get; set; }
+    [Parameter]
+    public string sun { get; set; }
+
+
+ }

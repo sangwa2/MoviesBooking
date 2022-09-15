@@ -1,0 +1,80 @@
+﻿@page "/newBooking/{DayTop}/{times}/{movie_id}"
+@inject HttpClient httpClient
+@inject NavigationManager navigationManager;
+@inject IBookings bookingService;
+
+@using MoviesApp.Services
+@using MoviesAppModels;
+@using System.Net.Http.Headers
+@using Newtonsoft.Json
+
+<h2> Booking Details</h2>
+
+<div class="row">
+
+    <h3>The day chosen</h3>
+
+    <div class="container p-5">
+
+        <div class="row">
+            <div class="col-md-4">
+                <ul>
+                    <li> <b> @DayTop  </b> </li>
+                    <li><b> @times</b></li>
+                    <li><b> @movie_id</b></li>
+                </ul>
+                <div>
+                    <button class="btn btn-success" @onclick="()=> BookMovie()">
+                        Book
+                    </button>
+
+                     
+                </div>
+            </div>
+
+            <div class="col-md-8 border-dark shadow shadow-sm">
+                <h3>
+                    Choose a different Movie
+                </h3>
+
+                <Moviesdata />
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+@code {
+    [Parameter]
+    public string DayTop { get; set; }
+
+    [Parameter]
+    public string times { get; set; }
+
+    [Parameter]
+    public string movie_id { get; set; }
+
+    [Parameter]
+    public string savedStatus { get; set; }
+
+    protected async Task BookMovie() {
+        Console.WriteLine("You are booking a movie");
+        var postBody = new { DayTop = DayTop, times = times, movie_id = movie_id };
+
+        MoviesAppModels.Models.Bookings bookings = new MoviesAppModels.Models.Bookings();
+        bookings.id = 0;
+        bookings.day = DayTop;
+        bookings.hour = times;
+        bookings.MovieId = Convert.ToInt32(movie_id);
+
+
+         
+    }
+}
